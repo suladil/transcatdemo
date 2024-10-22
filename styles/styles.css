@@ -22,7 +22,7 @@
   /* fonts */ 
   --body-font-family: Arial, Helvetica, sans-serif;
   --heading-font-family: Arial, Helvetica, sans-serif;
-  --fixed-font-family: 'helvetica', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
   --body-font-size-m: 22px;
