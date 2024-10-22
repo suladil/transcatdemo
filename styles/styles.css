@@ -163,7 +163,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   color: black;
-  background-color: white;
+  background-color: #00539b;
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -187,9 +187,9 @@ button:disabled:hover {
 
 a.button.secondary,
 button.secondary {
-  background-color: #00539b; 
+  background-color: #ffffff; 
   border: 2px solid #00539b;
-  color: var(--text-color);
+  color: #00539b;
 }
 
 main img {
