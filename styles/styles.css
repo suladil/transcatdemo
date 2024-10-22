@@ -94,7 +94,7 @@ h6 {
 h2 {
     color: #00539b;
     text-align: center;
-    font-family: 'helvetica-condensed-bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
