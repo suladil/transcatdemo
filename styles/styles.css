@@ -21,7 +21,7 @@
 
   /* fonts */ 
   --body-font-family: Arial, Helvetica, sans-serif;
-  --heading-font-family: Arial, Helvetica, sans-serif;
+  --heading-font-family: 'helvetica-condensed-bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
