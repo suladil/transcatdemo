@@ -67,6 +67,7 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
+  text-align: center;
 }
 
 body.appear {
@@ -161,8 +162,8 @@ button {
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
+  color: #00539b;
+  background-color: white ;
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
