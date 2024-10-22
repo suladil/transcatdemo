@@ -42,7 +42,7 @@
 }
 
 @font-face {
-  font-family: roboto-fallback;
+  font-family: Arial, Helvetica, sans-serif;
   size-adjust: 100.06%;
   ascent-override: 95%;
   src: local('Arial');
