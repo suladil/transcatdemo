@@ -2,8 +2,8 @@
 .teaser {
     display: grid;
     grid-template-areas: "content image"; /* Separate areas for content and image */
-    align-items: start; /* Align items to the start */
-    gap: 20px; /* Add space between the two areas */
+    align-items: stretch; /* Ensure both items stretch to equal height */
+    gap: 20px; /* Space between the two areas */
 }
 
 .teaser > div {
@@ -14,11 +14,13 @@
     grid-area: content; /* Assigning grid area to content */
     width: 100%; /* Full width for content */
     background-color: #fff;
-    min-height: 180px; /* Minimum height for the content */
     padding: 0 28px;
     font-size: 18px;
     margin: 0;
     line-height: 1.75;
+    display: flex; /* Enable flexbox for internal alignment */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center the content vertically */
 }
 
 .teaser > div:last-child {
@@ -27,8 +29,7 @@
 }
 
 .teaser > div:last-child > div {
-    height: 40pc; /* Fixed height for the image container */
-    max-height: 40pc; /* Maximum height for the image container */
+    height: 100%; /* Make image container full height */
     width: 100%;
 }
 
@@ -43,7 +44,6 @@
     object-position: top; /* Position the image from the top */
     width: 100%;
     height: 100%;
-    max-height: 640px; /* Maximum height for the image */
 }
 
 .teaser h2 {
@@ -60,6 +60,12 @@
     color: #0056b3; /* Change color on hover */
 }
 
+/* Set equal heights */
+.teaser > div:first-child,
+.teaser > div:last-child {
+    height: 400px; /* Set a fixed height for both sections */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .teaser {
@@ -70,9 +76,10 @@
     .teaser > div:first-child,
     .teaser > div:last-child {
         width: 100%; /* Full width for both elements on smaller screens */
+        height: auto; /* Allow height to adjust on small screens */
     }
 
     .teaser > div:last-child > div {
-        height: 30pc; /* Adjust height for smaller screens */
+        height: auto; /* Adjust height for smaller screens */
     }
 }
