@@ -1,9 +1,9 @@
 /* stylelint-disable no-descending-specificity */
 .teaser {
     display: grid;
-    grid-template-areas: "content image"; /* Separate areas for content and image */
-    align-items: stretch; /* Ensure both items stretch to equal height */
-    gap: 20px; /* Space between the two areas */
+    grid-template-areas: "image content"; /* Define areas for image and content */
+    align-items: stretch; /* Ensure both cards stretch to equal height */
+    gap: 20px; /* Space between the two cards */
 }
 
 .teaser > div {
@@ -11,26 +11,26 @@
 }
 
 .teaser > div:first-child {
+    grid-area: image; /* Assigning grid area to the image */
+    width: 100%; /* Full width for image card */
+}
+
+.teaser > div:first-child > div {
+    height: 100%; /* Full height for the image container */
+    width: 100%;
+}
+
+.teaser > div:last-child {
     grid-area: content; /* Assigning grid area to content */
-    width: 100%; /* Full width for content */
+    width: 100%; /* Full width for content card */
     background-color: #fff;
-    padding: 0 28px;
+    padding: 20px; /* Padding for the content */
     font-size: 18px;
     margin: 0;
     line-height: 1.75;
     display: flex; /* Enable flexbox for internal alignment */
     flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center the content vertically */
-}
-
-.teaser > div:last-child {
-    grid-area: image; /* Assigning grid area to the image */
-    width: 100%; /* Full width for image */
-}
-
-.teaser > div:last-child > div {
-    height: 100%; /* Make image container full height */
-    width: 100%;
+    justify-content: flex-start; /* Align items to the top */
 }
 
 .teaser picture {
@@ -60,26 +60,22 @@
     color: #0056b3; /* Change color on hover */
 }
 
-/* Set equal heights */
-.teaser > div:first-child,
-.teaser > div:last-child {
-    height: 400px; /* Set a fixed height for both sections */
+/* Set equal heights for both cards */
+.teaser > div {
+    height: 400px; /* Set a fixed height for both cards */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .teaser {
-        grid-template-areas: "image" "content"; /* Stack on smaller screens */
+        grid-template-areas: 
+            "image" 
+            "content"; /* Stack on smaller screens */
         gap: 10px; /* Adjust gap for smaller screens */
     }
 
-    .teaser > div:first-child,
-    .teaser > div:last-child {
+    .teaser > div {
         width: 100%; /* Full width for both elements on smaller screens */
         height: auto; /* Allow height to adjust on small screens */
-    }
-
-    .teaser > div:last-child > div {
-        height: auto; /* Adjust height for smaller screens */
     }
 }
