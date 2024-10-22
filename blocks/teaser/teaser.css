@@ -1,29 +1,18 @@
 /* stylelint-disable no-descending-specificity */
 .teaser {
     display: grid;
-    grid-template-areas: "teaser";
+    grid-template-areas: "content image"; /* Updated layout */
     align-items: end;
     justify-items: center;
 }
 
 .teaser > div {
-    grid-area: teaser;
+    /* Ensure that the content and image occupy the correct areas */
 }
 
-/* teaser image */
 .teaser > div:first-child {
-    width: 100%;
-}
-
-.teaser > div:first-child > div {
-    height: 40pc;
-    max-height: 40pc;
-    width: 100%;
-}
-
-/* teaser content */
-.teaser > div:last-child {
-    width: 75%;
+    grid-area: content; /* Assigning grid area to content */
+    width: 75%; /* Adjust width for the text content */
     background-color: #fff;
     min-height: 180px;
     padding: 0 28px;
@@ -32,14 +21,24 @@
     line-height: 1.75;
 }
 
+.teaser > div:last-child {
+    grid-area: image; /* Assigning grid area to the image */
+    width: 100%;
+}
+
+.teaser > div:last-child > div {
+    height: 40pc;
+    max-height: 40pc;
+    width: 100%;
+}
+
 .teaser picture {
     width: 100%;
     height: 100%;
 }
 
 .teaser img {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
     object-fit: cover;
     object-position: top;
     width: 100%;
@@ -49,9 +48,29 @@
 
 .teaser h2 {
     font-family: var(--body-font-family);
-    margin: .5em 0;
+    margin: 0.5em 0;
 }
 
 .teaser h2 a {
-    color: #202020
+    color: #202020;
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.teaser h2 a:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .teaser {
+        grid-template-areas: "image" "content"; /* Stack on smaller screens */
+    }
+
+    .teaser > div:first-child {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .teaser > div:last-child > div {
+        height: 30pc; /* Adjust height for smaller screens */
+    }
 }
