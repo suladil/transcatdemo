@@ -83,7 +83,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'helvetica-condensed-bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
   margin-top: 1em;
@@ -94,6 +94,7 @@ h6 {
 h2 {
     color: #00539b;
     text-align: center;
+    font-family: 'helvetica-condensed-bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
