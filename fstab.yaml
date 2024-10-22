@@ -1,5 +1,5 @@
 mountpoints:
   /:
-  url: "https://author-p23858-e855052.adobeaemcloud.com/bin/franklin.delivery/suladil/transcatdemo/main"
-  type: "markup"
-  suffix: ".html"
+    url: "https://author-p23858-e855052.adobeaemcloud.com/bin/franklin.delivery/suladil/transcatdemo/main"
+    type: "markup"
+    suffix: ".html"
