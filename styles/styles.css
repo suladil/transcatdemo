@@ -168,8 +168,9 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  border-radius: 8px; /* Adjusted for soft edges */
 }
+
 
 a.button:hover,
 a.button:focus,
